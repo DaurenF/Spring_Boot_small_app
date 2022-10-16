@@ -1,0 +1,36 @@
+.nav_buttons{
+    margin-left: 55%;
+}
+#user_button{
+    border:0;
+    background-color: white;
+}
+#user_icon{
+    color:black;
+}
+#user_icon:hover{
+    color:#8bcbfb;
+}
+.modal-body{
+    display: flex;
+    flex-direction: column;
+}
+.sign_out{
+    margin-top:2%;
+    margin-left: 41%;
+    background-color: #f1f4f4;
+    border:0;
+    padding:10px;
+    border-radius: 10px;
+}
+.sign_out:hover{
+    background-color: #8bcbfb;
+    transition: 0.4s;
+}
+.user_data{
+    display: flex;
+    justify-content: space-between;
+}
+.modal-content{
+    padding-bottom:3%;
+}

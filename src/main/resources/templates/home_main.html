@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5" xmlns:security="">
+<link rel="stylesheet" href="" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="https://css.gg/phone.css" rel="stylesheet" />
+    <link href='https://css.gg/clipboard.css' rel='stylesheet'>
+    <link href='https://css.gg/info.css' rel='stylesheet'>
+    <link href='https://css.gg/attachment.css' rel='stylesheet'>
+    <link href='https://css.gg/awards.css' rel='stylesheet'>
+    <link href='https://css.gg/toolbox.css' rel='stylesheet'>
+    <link href='https://css.gg/eye.css' rel='stylesheet'>
+    <link href='https://css.gg/instagram.css' rel='stylesheet'>
+    <link href='https://css.gg/facebook.css' rel='stylesheet'>
+    <link href='https://css.gg/user.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+
+    <title>Digital Jambyl</title>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="/"><img th:src = "@{/images/421.jpg}" alt="" class="logo" /></a>
+        <a href="/" class="link_logo">Digital Jambyl</a>
+        <input type="search" class="search" placeholder="  Поиск по сайту..." />
+
+        <div class="nav_buttons">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" id = "user_button" data-toggle="modal" data-target="#exampleModalCenter">
+                <i class="gg-user" id = "user_icon"></i>
+            </button>
+
+            </a>
+
+            <select class="language">
+                <option selected class="russ">RU</option>
+                <option class="kaz">Kaz</option>
+            </select>
+            <a href="#footer_contacts_block" class="contacts_link"
+            ><i class="gg-phone" id="contacts"></i
+            ></a>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="sidebar">
+        <div class = slide_bar_parts>
+            <div class = "box_for_icons">
+
+                <i class="gg-clipboard" id = "news_icon"></i>
+            </div>
+            <a href="#last_news" class = "elements">Новости</a>
+
+        </div>
+
+        <div class = slide_bar_parts>
+            <div class = "box_for_icons">
+
+                <i class="gg-info" id = "news_icon"></i>
+            </div>
+            <a href="#" class = "elements">О центре</a>
+
+        </div>
+
+        <div class = slide_bar_parts>
+            <div class = "box_for_icons3">
+                <i class="gg-attachment" id = "news_icon3"></i>
+            </div>
+            <a href="#" class = "elements">Документы</a>
+
+
+        </div>
+
+
+        <div class = slide_bar_parts>
+            <div class = "box_for_icons">
+                <i class="gg-awards"  id = "news_icon"></i>
+            </div>
+            <a href="#" class = "elements">Проекты</a>
+
+
+
+        </div>
+
+        <div class = slide_bar_parts>
+            <div class = "box_for_icons">
+                <i class="gg-toolbox" id = "news_icon"></i>
+            </div>
+            <a href="#" class = "elements">Вакансии</a>
+
+
+
+        </div>
+    </div>
+
+    <div class = "content">
+
+
+
+
+
+        <div class = "main_projects">
+            <div class = "content_wrapper">
+                <h2 class = "main_projects_h2">
+                    Работа по "Цифровизации" в Жамбылской области реализуется по
+                    следующим направлениям:
+                </h2>
+            </div>
+
+            <section class = "main_projects_body">
+                <img class = "main_projects_first" th:src="@{/images/fisrt.jpg}" alt="">
+                <div class = "main_projects_block">
+                    <a href="">
+                        <div class = "main_projects_block_txt">
+                            Национальный проект "Технологический рывок за счет цифровизации, науки и инноваций"
+                        </div>
+                    </a>
+
+                </div>
+                <div class = "main_projects_txt">
+                    Национальный проект включает в 44 показателяx, в 16 показателях Мио является соисполнителем.
+                    В план развития области вошли 12 показателей.
+                </div>
+                <!--SECOND-->
+                <img class = "main_projects_first" id = "main_projects_second" th:src="@{/images/аманат.jpg}" alt="">
+                <div class = "main_projects_block" id = "main_projects_block2">
+                    <a href="">
+                        <div class = "main_projects_block_txt">
+                            Предвыборная программа партии "Amanat" "Путь перемен: Достойную жизнь каждому!"
+                        </div>
+                    </a>
+
+                </div>
+                <div class = "main_projects_txt">
+                    Республиканская Дорожная карта содержит 362 пункта. Имеется 32 пункта, реализуемые управлениями акимата
+                    Жамбылской области, из низ управлением цифровых технологий ведется работа по 8 пунктам.
+                </div>
+                <!--THIRD-->
+                <img class = "main_projects_first" id = "main_projects_last"  th:src = "@{/images/smart_city.png}" alt="">
+                <div class = "main_projects_block" id = "main_projects_block3">
+                    <div class = "main_projects_block_txt" id = "main_projects_block3_txt">
+                        Реализация проектов в соответствии с эталонным стандартом "Умных" городов
+                    </div>
+                </div>
+                <div class = "main_projects_txt" id ="last_news">
+                    В целях повышения эффективности работы городских служб и внедрения умных технологий в
+                    Казахстане разработана и актуализируется концепция "Smart City" на 2022 году.
+                </div>
+            </section>
+        </div>
+
+        <div class = "news_main" >
+
+
+            <div class = "content_wrapper">
+                <h2  class = "news_h2">Последние новости</h2>
+            </div>
+            <hr>
+            <div th:each="el : ${#numbers.sequence(news.size() - 1, 0, -1)}" class = "content_wrapper" id = "news_main_block">
+                <div class = "news_block">
+                    <div class = "news_text_block">
+                        <a th:href="'/news/' + ${news[el].news_id}" class="news_h3"><h3 th:text="${news[el].title}" class = "news_h3">Большой meet-up аналитиков данных в Astana Hub</h3></a>
+                        <a th:text="${news[el].short_text}" href="" class = "news_text">В Astana Hub 25-го мая компанией R&D центра Maxinum Consulting Group была организована
+                            встреча аналитиков города
+                            Нур-Султан, где приняли участие более 60 человек.</a>
+                    </div>
+                    <img th:src="${news[el].link_img}" alt="" class = "news_img">
+                </div>
+                <div class = "news_footer">
+                    <i class="gg-eye" id = "eye_views"></i>
+                    <div th:text="${news[el].views}" class = "views">0</div>
+                    <div th:text="${news[el].date}" class = "date">10:06:2022</div>
+                </div>
+                <hr class = "news_footer_line">
+
+            </div>
+        </div>
+
+        <div class = "partners">
+
+
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" th:src="@{/images/partners/altel_black.png}"  alt="First slide" id = "slider_img">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" th:src="@{/images/partners/Beeline.jpg}" alt="Second slide"  id = "slider_img">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" th:src="@{/images/partners/telecom.png}" alt="Third slide"  id = "slider_img">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img class="d-block w-100" th:src="@{/images/partners/Kcell_logo.png}" alt="Third slide"  id = "slider_img">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img class="d-block w-100" th:src="@{/images/partners/transtelecom.jpg}" alt="Third slide"  id = "slider_img">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img class="d-block w-100" th:src="@{/images/partners/1920px-tele2-logo.png}" alt="Third slide"  id = "slider_img">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <div class = "map">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5c24315b5145f8c0deafafa7ad310303c959c9775359cd3fd03242818070ab0a&amp;width=687&amp;height=467&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+
+    </div>
+
+
+</main>
+
+
+<footer>
+    <div class = "footer_wrapper">
+
+
+        <img th:src="@{/images/logo.jpg}" alt="" class = "logo_footer">
+        <h3 class = "footer_h3">ЦЕНТР ПРОЕКТНОГО УПРАВЛЕНИЯ И ЦИФРОВИЗАЦИИ ЖАМБЫЛСКОЙ ОБЛАСТИ</h3>
+        <div class = "block_social_footer">
+            <a href="https://www.facebook.com/www.zhambyl.gov.kz/"  class = "footer_social" >
+                <i class="gg-instagram"></i></a>
+            <a href="https://www.instagram.com/digital.zhambyl/" class = "footer_social">
+                <i class="gg-facebook"></i>
+            </a>
+        </div>
+
+
+
+    </div>
+
+
+    <hr class = "footer_line">
+    <div class = "footer_wrapper" id = "footer_links_block">
+        <div class = "footer_link_block">
+            <a href="https://www.akorda.kz/ru" class = "footer_link">Сайт Президента РК</a>
+            <a href="https://www.akorda.kz/ru/addresses" class = "footer_link">Послание Президента РК</a>
+            <a href="https://www.akorda.kz/ru/state_symbols/about_state_symbols" class = "footer_link">Госудаственные символы РК</a>
+        </div>
+        <div class = "footer_link_block2">
+            <a href="https://www.gov.kz/memleket/entities/zhambyl?lang=ru" class = "footer_link">Акимат Жамбылской области</a>
+            <a href="https://www.gov.kz/memleket/entities/zhambyl-digital?lang=ru" class = "footer_link">Управление цифровых технологий акимата Жамбылской области</a>
+            <a href="https://www.gov.kz/article/terms?lang=ru" class = "footer_link">Термины и обозначения</a>
+        </div>
+
+    </div>
+    <hr class = "footer_line">
+    <div class = "footer_wrapper" id = "footer_contacts_block">
+        <h3 class = "contacts_footer">Контакты</h3>
+        <div>8 (7262) 53-07-733, 54-11-13, 54-54-90</div>
+        <div>epuc@zhambyl.gov.kz</div>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+</html>

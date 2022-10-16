@@ -1,0 +1,53 @@
+.content{
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+}
+.about_content_wrapper{
+    margin: 0 auto;
+    width: 90%;
+}
+.about_center_h3{
+    margin-top: 2%;
+    margin-left: 40%;
+}
+.about_center_block1{
+    position: relative;
+    padding-bottom: 20%;
+}
+.block1_img{
+    margin-top: 3%;
+    border-radius: 10px;
+}
+.about_center_img{
+    width: 70%;
+    border-radius: 10px;
+}
+.block1_text_block{
+    width: 50%;
+    padding:10px;
+    border-radius: 10px;
+    margin-top: -23%;
+    margin-left:50%;
+    position: absolute;
+    background-color: #8bcbfb;
+}
+.cards{
+    margin-top: 5%;
+
+}
+.card{
+    margin-left: 10px;
+}
+.out_team{
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+.out_team h3{
+    margin-left: 40%;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: nowrap;
+}

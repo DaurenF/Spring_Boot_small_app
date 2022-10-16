@@ -1,0 +1,63 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+	  xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+  <head>
+  	<title>Login 08</title>
+    <meta charset="utf-8">
+    <title>Spring Security Example</title>
+	<link rel="stylesheet" th:href="@{/css/login/css/style.css}">
+
+	</head>
+	<body>
+	<div th:if="${param.error}">
+		Invalid username and password.
+	</div>
+	<div th:if="${param.logout}">
+		You have been logged out.
+	</div>
+	<section class="ftco-section" >
+		<div class="container" >
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Вход</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-5">
+					<div class="login-wrap p-4 p-md-5">
+		      	<div class="icon d-flex align-items-center justify-content-center">
+		      		<span class="fa fa-user-o"></span>
+		      	</div>
+		      	<h3 class="text-center mb-4" id = "h3_have_account">Есть аккаунт?</h3>
+						<form th:action="@{/login}" method="post" class="login-form">
+		      		<div class="form-group d-flex">
+		      			<input type="text" class="form-control rounded-left" placeholder="Username" name="username" required>
+		      		</div>
+	            <div class="form-group d-flex">
+	              <input type="password" class="form-control rounded-left" placeholder="Password" name = "password" required>
+	            </div>
+	            <div class="form-group d-md-flex">
+	            	<div class="w-50">
+					</div>
+								<div class="w-50 text-md-right">
+									<a href="#" class = "forgot_password">Забыл пароль</a>
+								</div>
+	            </div>
+	            <div class="form-group">
+					<div><input type="submit" class = "button_in" value="Зайти"/></div>
+	            </div>
+	          </form>
+
+	        </div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script th:src="@{/css/login/js/jquery.min.js}"></script>
+  <script th:src="@{/css/login/js/popper.js}"></script>
+  <script th:src="@{/css/login/js/bootstrap.min.js}"></script>
+  <script th:src="@{/css/login/js/main.js}"></script>
+
+	</body>
+</html>
+
